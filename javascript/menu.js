@@ -38,10 +38,10 @@ var menu = `
         <div class="align-self-end">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Cadastre - se</a>
+                    <a href="menu.html" class="nav-link">Cadastre - se</a>
                 </li>
                 <li class="nav-item">
-                    <a href="login.html" class="nav-link">Login</a>
+                    <a href="menu.html" class="nav-link">Login</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link"><img src="imagens/icon-compras.png" id="icon-compras"></a>
