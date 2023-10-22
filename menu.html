@@ -4,133 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Menu</title>
-    <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
 </head>
-<!-- Menu testes, modificou e funcionou copia e cola no menu.js -->
-
 <body>
 
-    <nav class="navbar navbar-expand-lg border-bottom shadow-sm mb-3" id="menu">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><strong><img src="imagens/Logo.png" id="logo"></strong></a>
-            <!-- Botão de menu responsivo -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <!-- icone -->
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="border-dark navbar-toggler-icon"></span>
             </button>
+            <a class="navbar-brand" href="index.html"><strong><img src="imagens/Logo.png" id="logo"></strong></a>
+            <!--Barra de pesquisa-->
+            <main>
+                <form class="d-flex" role="search">
+                    <input class="form-control barra-pesquisa" type="search" placeholder="Buscar" aria-label="Search">
+                    <button class="btn btn-close-white" type="submit"><img src="imagens/icon_pesquisa.png"
+                            id="icon_pesquisa"></button>
+                </form>
+            </main>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
 
-            <!-- Menu -->
-            <!--"navbarNav" abre o botão-->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!--Barra de pesquisa-->
-                <main>
-                    <form class="d-flex" role="search">
-                        <input class="form-control barra-pesquisa" type="search" placeholder="Search"
-                            aria-label="Search">
-                        <button class="btn btn-close-white" type="submit"><img src="imagens/icon_pesquisa.png"
-                                id="icon_pesquisa"></button>
-                    </form>
-                </main>
-                <ul class="navbar-nav flex-grow-1">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Categoria</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Promoções</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">Povos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link"></a>
-                    </li>
-                </ul>
-                <!-- Alinha à direita de forma flutuante "align-self-end" -->
-                <div class="align-self-end">
-                    <ul class="navbar-nav">
+                <div class="offcanvas-body">
+
+                    <ul class="navbar-nav flex-grow-1 ms-5">
                         <li class="nav-item">
-                            <a href="menu.html" class="nav-link">Cadastre - se</a>
+                            <a href="#" class="nav-link">Categoria</a>
                         </li>
                         <li class="nav-item">
-                            <a href="menu.html" class="nav-link">Login</a>
+                            <a href="#" class="nav-link">Promoções</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><img src="imagens/icon-compras.png" id="icon-compras"></a>
+                            <a href="#" class="nav-link">Sobre</a>
                         </li>
+
                     </ul>
+                    <!-- Alinha à direita de forma flutuante "align-self-end" -->
+                    <div class="align-self-end">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Cadastre-se</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="login.html" class="nav-link">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link"><svg xmlns="http://www.w3.org/2000/svg" id="icon-compras"
+                                        width="16" height="16" fill="currentColor" class="bi bi-cart3"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </svg></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-     <!--Parte de baixo são html de login e inscrição-->
-    <div class="parte-login">
-        <div class="wrapper">
-            <div class="title-text">
-              <div class="title login">Conecta</div>
-              <div class="title signup">Formulário de inscrição</div>
-            </div>
-            <div class="form-container">
-              <div class="slide-controls">
-                <input type="radio" name="slide" id="login" checked>
-                <input type="radio" name="slide" id="signup">
-                <label for="login" class="slide login">Login</label>
-                <label for="signup" class="slide signup">Inscreva-se</label>
-                <div class="slider-tab"></div>
-              </div>
-              <div class="form-inner">
-                <form action="#" class="login">
-                  <div class="field">
-                    <input type="text" placeholder="Endereço de e-mail" required>
-                  </div>
-                  <div class="field">
-                    <input type="Senha" placeholder="Senha" required>
-                  </div>
-                  <div class="pass-link"><a href="#">Esqueceu sua senha ?</a></div>
-                  <div class="field btn">
-                    <div class="btn-layer"></div>
-                    <input type="submit" value="Login">
-                  </div>
-                  <div class="signup-link">Não é um menbror? <a href="#">Inscreva-se agora</a></div>
-                </form>
-                <form action="#" class="Inscreva-se">
-                  <div class="field">
-                    <input type="text" placeholder="Endereço de e-mail" required>
-                  </div>
-                  <div class="field">
-                    <input type="password" placeholder="Senha" required>
-                  </div>
-                  <div class="field">
-                    <input type="password" placeholder="Confimar Senha" required>
-                  </div>
-                  <div class="field btn">
-                    <div class="btn-layer"></div>
-                    <input type="submit" value="Inscreva-se">
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-    </div>
-    
-      <script  src="javascript/loginscript.js"></script>
     <style>
-        //*css de menu*//
+        .navbar {
+            background-color: #7a260f;
+        }
+
+        .offcanvas {
+            background-color: #7a260f;
+
+        }
+
         #logo {
             max-width: 100px;
-        }
-        #menu{
-            position: fixed;
-            margin-top: -6%;
-        }
-
-        .container{
-            background-color: #C0C0C0;
-            position: fixed;
-            margin: -25%;       
-
         }
 
         #icon-compras {
@@ -139,14 +88,7 @@
         }
 
         #icon_pesquisa {
-            width: 24px;
-        }
-
-        .barra-pesquisa {
-            width: 330px;
-            height: 35px;
-            border-radius: 0.6em;
-            margin-top: 10px;
+            width: 20px;
         }
 
         .nav-item .nav-link {
@@ -156,200 +98,67 @@
         .nav-item .nav-link:hover {
             color: #ffffff;
         }
-        @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
-
-        //*Parte de baixo é css de login e inscrição*//
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-html,
-.parte-login{
-  display: grid;
-  height: 100%;
-  width: 100%;
-  margin-top: 2%;
-  place-items: center;
-}
-::selection {
-  background: #1a75ff;
-  color: #ffffff;
-  margin-lef
-}
-.wrapper {
-  overflow: hidden;
-  max-width: 390px;
-  background: #ccc6d3;
-  padding: 10px;
-  border-radius:25px;
-  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
-}
-.wrapper .title-text {
-  display: flex;
-  width: 200%;
-}
-.wrapper .title {
-  width: 50%;
-  font-size: 35px;
-  font-weight: 600;
-  text-align: center;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.wrapper .slide-controls {
-  position: relative;
-  display: flex;
-  height: 50px;
-  width: 100%;
-  overflow: hidden;
-  margin: 30px 0 10px 0;
-  justify-content: space-between;
-  border: 1px solid rgb(156, 149, 149);
-  border-radius: 15px;
-}
-.slide-controls .slide {
-  height: 100%;
-  width: 100%;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  line-height: 48px;
-  cursor: pointer;
-  z-index: 1;
-  transition: all 0.6s ease;
-}
-.slide-controls label.signup {
-  color: #000;
-}
-.slide-controls .slider-tab {
-  position: absolute;
-  height: 100%;
-  width: 50%;
-  left: 0;
-  z-index: 0;
-  border-radius: 15px;
-  background: -webkit-linear-gradient(left, #19191a, #1a191a, #64576b, #333334);
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-input[type="radio"] {
-  display: none;
-}
-#signup:checked ~ .slider-tab {
-  left: 50%;
-}
-#signup:checked ~ label.signup {
-  color: #fff;
-  cursor: default;
-  user-select: none;
-}
-#signup:checked ~ label.login {
-  color: #000;
-}
-#login:checked ~ label.signup {
-  color: #000;
-}
-#login:checked ~ label.login {
-  cursor: default;
-  user-select: none;
-}
-.wrapper .form-container {
-  width: 100%;
-  overflow: hidden;
-}
-.form-container .form-inner {
-  display: flex;
-  width: 200%;
-}
-.form-container .form-inner form {
-  width: 50%;
-  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-.form-inner form .field {
-  height: 50px;
-  width: 100%;
-  margin-top: 20px;
-}
-.form-inner form .field input {
-  height: 100%;
-  width: 100%;
-  outline: none;
-  padding-left: 15px;
-  border-radius: 15px;
-  border: 1px solid lightgrey;
-  border-bottom-width: 2px;
-  font-size: 17px;
-  transition: all 0.3s ease;
-}
-.form-inner form .field input:focus {
-  border-color: #1a75ff;
-  /* box-shadow: inset 0 0 3px #fb6aae; */
-}
-.form-inner form .field input::placeholder {
-  color: #999;
-  transition: all 0.3s ease;
-}
-form .field input:focus::placeholder {
-  color: #1a75ff;
-}
-.form-inner form .pass-link {
-  margin-top: 5px;
-}
-.form-inner form .signup-link {
-  text-align: center;
-  margin-top: 30px;
-}
-.form-inner form .pass-link a,
-.form-inner form .signup-link a {
-  color: #1a75ff;
-  text-decoration: none;
-}
-.form-inner form .pass-link a:hover,
-.form-inner form .signup-link a:hover {
-  text-decoration: underline;
-}
-form .btn {
-  height: 50px;
-  width: 100%;
-  border-radius: 15px;
-  position: relative;
-  overflow: hidden;
-}
-form .btn .btn-layer {
-  height: 100%;
-  width: 300%;
-  position: absolute;
-  left: -100%;
-  background: -webkit-linear-gradient(
-    right,
-    #686567,
-    #222223,
-    #161717,
-    #d2bed6
-  );
-  border-radius: 15px;
-  transition: all 0.4s ease;
-}
-form .btn:hover .btn-layer {
-  left: 0;
-}
-form .btn input[type="submit"] {
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: relative;
-  background: none;
-  border: none;
-  color: #fff;
-  padding-left: 0;
-  border-radius: 15px;
-  font-size: 20px;
-  font-weight: 500;
-  cursor: pointer;
-}
-
     </style>
+    <footer class="bg-light text-lg-start">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Sobre Nós</h5>
+                    <p>Como comprar
+                        Cuidados com sua peça
+                        Perguntas frequentes
+                        Trocas e Devoluções
+                        Política de Privacidade
+                        Trabalhe Conosco
+                        Contato</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="ms-lg-5">Contato</h5>
+                    <p class="ms-lg-5">Endereço: Rua da Viagem, 123<br>Telefone: (38) 456-7890<br>Email:
+                        arteindigena@gmail.com</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5>Meios de pagamentos</h5>
+                    <div class="row" id="icon-pagamento">
+                        <img src="imagens/icon-Pagamentos/visa.png">
+                        <img src="imagens/icon-Pagamentos/mastercard.png">
+                        <img src="imagens/icon-Pagamentos/diners.png">
+                        <img src="imagens/icon-Pagamentos/diners.png">
+                        <img src="imagens/icon-Pagamentos/elo.png">
+                        <img src="imagens/icon-Pagamentos/boleto.png">
+                        <img src="imagens/icon-Pagamentos/discover.png">
+                        <img src="imagens/icon-Pagamentos/amex.png">
+
+                    </div>
+                    <hr>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="">Formas de envio</h5>
+                    <div class="row" id="icon-envio">
+                        <img src="imagens/icon-Pagamentos/correios.png">
+                        <img src="imagens/icon-Pagamentos/sedex.png">
+                        <img src="imagens/icon-Pagamentos/pac.png">
+                    </div><hr>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            #icon-pagamento img {
+                width: 18%;
+                margin-top: 7px;
+            }
+
+            .icon-redes-sociais svg {
+                margin-left: 3.4%;
+
+            }
+
+            #icon-envio img {
+                width: 25%;
+            }
+        </style>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

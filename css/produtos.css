@@ -1,0 +1,15 @@
+#produto{
+    width: 275px;
+    margin-left: 15px;
+    background-color: white;
+    border-radius:1rem;
+}
+#produto:hover {
+    transform: scale(0.9);
+}
+#produto img:hover {
+    transform: scale(1.5);
+}
+.icon-compra{
+    width: 200px;
+}
