@@ -1,14 +1,11 @@
 #produto{
-    width: 275px;
-    margin-left: 15px;
+    margin-left: 10px;
     background-color: white;
     border-radius:1rem;
 }
+
 #produto:hover {
-    transform: scale(0.9);
-}
-#produto img:hover {
-    transform: scale(1.5);
+    box-shadow: rgba(50, 50, 93, 0.25) 1px 1px 12px 9px, rgba(0, 0, 0, 0.3) 0px 1px 1px 1px;
 }
 .icon-compra{
     width: 200px;
