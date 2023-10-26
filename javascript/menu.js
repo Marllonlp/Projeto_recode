@@ -28,11 +28,17 @@ var menu = `
                 <li class="nav-item">
                     <a href="#" class="nav-link">Categoria</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Promoções</a>
+                    <a href="#" class="nav-link">Moda</a>
                 </li>
+
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Sobre</a>
+                <a href="#" class="nav-link">Promoções</a>
+               </li>
+
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Blog</a>
                 </li>
 
             </ul>
