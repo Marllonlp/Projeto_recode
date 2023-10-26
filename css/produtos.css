@@ -9,3 +9,11 @@
 .icon-compra {
     width: 200px;
 }
+
+#produto {
+    height: 450px;
+}
+
+#produto img {
+    height: 60%;
+}
