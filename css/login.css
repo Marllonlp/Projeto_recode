@@ -2,8 +2,8 @@
 
 :root {
   --text-dark: #7a260f;
-  --text-light: #7a260f);
-  --primary: #3671fd);
+  --text-light: #7a260f;
+  --primary: #3671fd;
   --primary-lighter: hsl(240, 33%, 86%);
   --primary-gradient: linear-gradient(to right, #3671fd, #3671fd);
 }

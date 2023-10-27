@@ -6,21 +6,21 @@ const form = document.querySelector("form"),
   cPassField = form.querySelector(".confirm-password"),
   cPassInput = cPassField.querySelector(".cPassword");
 
-// Email Validtion
+// Validação de e-mail
 function checkEmail() {
   const emaiPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (!emailInput.value.match(emaiPattern)) {
-    return emailField.classList.add("invalid"); //adding invalid class if email value do not mathced with email pattern
+    return emailField.classList.add("invalid"); //adicionando classe inválida se o valor do email não corresponder ao padrão de email
   }
-  emailField.classList.remove("invalid"); //removing invalid class if email value matched with emaiPattern
+  emailField.classList.remove("invalid");//removendo classe inválida se o valor do email corresponder a emaiPattern
 }
 
-// Hide and show password
+//Oculta e mostra a senha
 const eyeIcons = document.querySelectorAll(".show-hide");
 
 eyeIcons.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
-    const pInput = eyeIcon.parentElement.querySelector("input"); //getting parent element of eye icon and selecting the password input
+    const pInput = eyeIcon.parentElement.querySelector("input"); //obtendo o elemento pai do ícone do olho e selecionando a entrada da senha
     if (pInput.type === "password") {
       eyeIcon.classList.replace("bx-hide", "bx-show");
       return (pInput.type = "text");
@@ -30,17 +30,17 @@ eyeIcons.forEach((eyeIcon) => {
   });
 });
 
-// Password Validation
+// Validação de senha
 function createPass() {
   const passPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
   if (!passInput.value.match(passPattern)) {
-    return passField.classList.add("invalid"); //adding invalid class if password input value do not match with passPattern
+    return passField.classList.add("invalid");//adicionando classe inválida se o valor de entrada da senha não corresponder a passPattern
   }
-  passField.classList.remove("invalid"); //removing invalid class if password input value matched with passPattern
+  passField.classList.remove("invalid");//removendo classe inválida se o valor de entrada da senha corresponder a passPattern
 }
 
-// Confirm Password Validtion
+//Confirma a validação da senha
 function confirmPass() {
   if (passInput.value !== cPassInput.value || cPassInput.value === "") {
     return cPassField.classList.add("invalid");
@@ -48,14 +48,14 @@ function confirmPass() {
   cPassField.classList.remove("invalid");
 }
 
-// Calling Funtion on Form Sumbit
+// Chamando a função no envio do formulário
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); //preventing form submitting
+  e.preventDefault(); //impedindo o envio do formulário
   checkEmail();
   createPass();
   confirmPass();
 
-  //calling function on key up
+//chama a função ao pressionar a tecla
   emailInput.addEventListener("keyup", checkEmail);
   passInput.addEventListener("keyup", createPass);
   cPassInput.addEventListener("keyup", confirmPass);
