@@ -1,19 +1,38 @@
-#t-produto {
-    margin: 40px;
+.l-produtos {
+    margin: 0%;
+    margin-bottom: 10px;
 }
 
-#produto:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 1px 1px 12px 9px, rgba(0, 0, 0, 0.3) 0px 1px 1px 1px;
+.produto {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
 }
 
-.icon-compra {
-    width: 200px;
+.produto img:hover {
+    cursor: pointer;
 }
 
-#produto {
-    height: 450px;
+.produto-icons {
+    background-color: #f8f8f8;
+    padding: 5px 10px;
 }
 
-#produto img {
-    height: 60%;
+.icon-button {
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.icon-button:hover {
+    color: #ff0000;
+}
+
+.produto-descricao {
+    font-size: 13px;
+    color: #434141;
+}
+
+.produto-preco {
+    font-size: 20px;
 }

@@ -26,20 +26,20 @@ var menu = `
 
             <ul class="navbar-nav flex-grow-1 ms-5">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Categoria</a>
-                </li>
+                    <a href="#" class="nav-link">Favoritos</a>
+                 </li>
 
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Moda</a>
+                <a href="cadastro.html" class="nav-link">Compras</a>
                 </li>
+                
+                <li class="nav-item">
+                <a href="#" class="nav-link">Blog</a>
+                 </li>
 
                 <li class="nav-item">
-                <a href="#" class="nav-link">Promoções</a>
-               </li>
-
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Blog</a>
-                </li>
+                    <a href="#" class="nav-link">Sobre</a>
+                 </li>
 
             </ul>
             <!-- Alinha à direita de forma flutuante "align-self-end" -->
